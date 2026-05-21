@@ -75,6 +75,20 @@
       min-height: calc(100vh - 120px);
     }
 
+    .hero,
+    .about,
+    .services,
+    .skills,
+    .projects,
+    .process,
+    .contact,
+    footer {
+      max-width: 1400px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100%;
+    }
+
     /* Canvas */
     #starfield {
       position: fixed;
@@ -104,11 +118,17 @@
       left: 0;
       right: 0;
       z-index: 100;
+      padding: 2rem 4rem;
+      transition: background 0.4s, padding 0.4s;
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem 4rem;
-      transition: background 0.4s, padding 0.4s;
     }
 
     nav.scrolled {
@@ -2446,23 +2466,25 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#" onclick="showPage('home')" class="nav-logo">
-      <img src="logo.png" alt="SkieStudio" style="height: 40px; width: auto; display: block;">
-    </a>
-    
-    <div class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+    <div class="nav-container">
+      <a href="#" onclick="showPage('home')" class="nav-logo">
+        <img src="logo.png" alt="SkieStudio" style="height: 40px; width: auto; display: block;">
+      </a>
+      
+      <div class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" onclick="showPage('home'); closeMobileMenu();">Home</a></li>
+        <li><a href="#" onclick="showPage('web-dev'); closeMobileMenu();">Web Dev</a></li>
+        <li><a href="#" onclick="showPage('projects'); closeMobileMenu();">Portfolio</a></li>
+        <li><a href="#" onclick="showPage('about'); closeMobileMenu();">Tentang</a></li>
+        <li><a href="#" onclick="showPage('contact'); closeMobileMenu();">Kontak</a></li>
+      </ul>
     </div>
-    
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#" onclick="showPage('home'); closeMobileMenu();">Home</a></li>
-      <li><a href="#" onclick="showPage('web-dev'); closeMobileMenu();">Web Dev</a></li>
-      <li><a href="#" onclick="showPage('projects'); closeMobileMenu();">Portfolio</a></li>
-      <li><a href="#" onclick="showPage('about'); closeMobileMenu();">Tentang</a></li>
-      <li><a href="#" onclick="showPage('contact'); closeMobileMenu();">Kontak</a></li>
-    </ul>
   </nav>
 
   <!-- PAGES WRAPPER -->
