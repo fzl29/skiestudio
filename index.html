@@ -80,7 +80,6 @@
     .services,
     .skills,
     .projects,
-    .process,
     .contact,
     footer {
       max-width: 1400px;
@@ -1223,8 +1222,21 @@
 
     /* PROCESS */
     .process {
-      padding: 8rem 4rem;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
       background: var(--ink-2);
+      padding: 8rem 0;
+    }
+    
+    .process-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 4rem;
+      width: 100%;
     }
 
     .process-steps {
@@ -1497,9 +1509,17 @@
       .services,
       .skills,
       .projects,
-      .process,
       .contact,
       footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      
+      .process {
+        padding: 4rem 0;
+      }
+      
+      .process-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
@@ -2593,7 +2613,8 @@
 
     <!-- PROCESS SECTION (Inside Home) -->
     <div class="process reveal" id="process" style="margin-top: 5rem; padding-bottom: 5rem;">
-      <div style="padding: 0;">
+      <div class="process-container">
+        <div style="padding: 0;">
         <p class="section-label">Cara Kerja</p>
         <h2 class="section-title">Proses <em>Kreatif</em></h2>
       </div>
@@ -2618,6 +2639,7 @@
           <div class="step-title">Deliver</div>
           <div class="step-desc">Menyerahkan hasil kerja yang sempurna dengan dukungan penuh pasca-pengiriman.</div>
         </div>
+      </div>
       </div>
     </div>
 
